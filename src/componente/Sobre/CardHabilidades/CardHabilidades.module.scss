@@ -1,0 +1,16 @@
+@import '../../../assets/baseSass/base.scss';
+
+.cardhabilidades {
+  width: 70px;
+  min-height: 42.09px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+
+  background-color: $colorAzulBg;
+
+  .logoHabilidade{
+    width: 30px;
+  }
+}

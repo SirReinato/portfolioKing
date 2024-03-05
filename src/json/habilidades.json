@@ -1,0 +1,30 @@
+[
+    {
+        "nome": "JavaScript",
+        "path": "/habilidades/JavaScript.png"
+    },
+    {
+        "nome": "React.js",
+        "path": "/habilidades/React.js.png"
+    },
+    {
+        "nome": "Next.js",
+        "path": "/habilidades/Next.js.png"
+    },
+    {
+        "nome": "Node.js",
+        "path": "/habilidades/Node.js.png"
+    },
+    {
+        "nome": "Sass",
+        "path": "/habilidades/Sass.png"
+    },
+    {
+        "nome": "Figma",
+        "path": "/habilidades/Figma.png"
+    },
+    {
+        "nome": "Bootstrap",
+        "path": "/habilidades/Bootstrap.png"
+    }
+]
