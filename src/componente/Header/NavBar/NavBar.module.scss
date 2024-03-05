@@ -1,0 +1,13 @@
+.navbar {
+    width: 100%;
+
+    .menuHamburguer{
+        border: 3px solid #A2CAEA;
+        padding: 2px;
+        &:hover{
+            border: 3px solid #000;
+        }
+    }
+
+    
+}

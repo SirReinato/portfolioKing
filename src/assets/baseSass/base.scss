@@ -1,0 +1,18 @@
+$fontPrincipal: "Libre Caslon Display", serif;
+
+//Color
+$colorText: #A2CAEA;
+$colorTextDestaque: #63C1A4;
+$colorAzulBg: #2F6A99;
+$colorRoxo: #301F67;
+
+@mixin Titulo {
+    font-size: 32px;
+    font-family: $fontPrincipal;
+    color: $colorTextDestaque;
+}
+@mixin TextoBase {
+    color: $colorText;
+    font-family: $fontPrincipal;
+    letter-spacing: .1em;
+}
