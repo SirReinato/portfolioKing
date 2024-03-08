@@ -1,0 +1,37 @@
+[
+    {
+        "nome": "Mala de Viagem 2.0",
+        "subtitulo": "React.js",
+        "path": "/portfolio/malaDeViagem2.0.png"
+    },
+    {
+        "nome": "MainVeigar",
+        "subtitulo": "React.js",
+        "path": "/portfolio/mainVeigar.png"
+    },
+    {
+        "nome": "Finanças Fáceis",
+        "subtitulo": "React.js",
+        "path": "/portfolio/financas.png"
+    },
+    {
+        "nome": "O melhor do trigo",
+        "subtitulo": "React.js",
+        "path": "/portfolio/oMelhorDoTrigo.png"
+    },
+    {
+        "nome": "News Home Page",
+        "subtitulo": "HTML CSS JS",
+        "path": "/portfolio/newsHome.png"
+    },
+    {
+        "nome": "Mala de Viagem",
+        "subtitulo": "React.js",
+        "path": "/portfolio/malaDeViagem.png"
+    },
+    {
+        "nome": "Intro Sectio",
+        "subtitulo": "React.js",
+        "path": "/portfolio/introSectio.png"
+    }
+]

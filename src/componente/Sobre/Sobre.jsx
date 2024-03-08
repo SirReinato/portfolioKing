@@ -4,7 +4,6 @@ import CardHabilidades from './CardHabilidades/CardHabilidades';
 
 
 const Sobre = ({ }) => {
-	console.log(habilidades);
 	return (
 		<section className={styles.sobre}>
 			<div className={styles.sobreText}>

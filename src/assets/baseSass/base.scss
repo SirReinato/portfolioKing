@@ -10,6 +10,7 @@ $colorRoxo: #301F67;
     font-size: 32px;
     font-family: $fontPrincipal;
     color: $colorTextDestaque;
+    font-weight: bold;
 }
 @mixin TextoBase {
     color: $colorText;

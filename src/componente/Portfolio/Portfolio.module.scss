@@ -1,0 +1,25 @@
+@import '../../assets/baseSass/base.scss';
+
+.portfolio {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+
+    .portTitle {
+        @include Titulo;
+    }
+
+    .portBanner {
+        width: 100%;
+        height: 212px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgb(162, 202, 234);
+        background: linear-gradient(329deg, rgba(162, 202, 234, 1) 0%, rgba(162, 202, 234, 1) 100%);
+    }
+
+
+}
