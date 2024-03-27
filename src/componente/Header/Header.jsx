@@ -1,14 +1,11 @@
-import Banner from '../Banner/Banner';
 import styles from './Header.module.scss';
 import NavBar from './NavBar/NavBar';
 
 const Header = ({}) => {
 	return (
 		<div className={styles.header}>
- 			<NavBar/>
-			<Banner 
-				foto={'/MyFace.png'}
-			/>
+			<NavBar/>
+			<img className={styles.duasBarraHeader} src="/header/duasBarras.png" alt="duasBarras" />
  		</div>
 	);
 };

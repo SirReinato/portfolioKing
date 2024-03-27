@@ -1,13 +1,11 @@
 .navbar {
-    width: 100%;
+    max-width: 349px;
+    height: 30px;
+    margin-right: 64px;
+    ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
 
-    .menuHamburguer{
-        border: 3px solid #A2CAEA;
-        padding: 2px;
-        &:hover{
-            border: 3px solid #000;
-        }
     }
-
-    
 }
