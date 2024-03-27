@@ -3,7 +3,7 @@ import habilidades from '../../json/habilidades.json';
 import CardHabilidades from './CardHabilidades/CardHabilidades';
 
 
-const Sobre = ({ }) => {
+const Sooo = ({ }) => {
 	return (
 		<section className={styles.sobre}>
 			<div className={styles.sobreText}>
@@ -25,4 +25,4 @@ const Sobre = ({ }) => {
 };
 
 
-export default Sobre;
+export default Sooo;

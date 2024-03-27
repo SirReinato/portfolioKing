@@ -30,6 +30,11 @@
         "path": "/portfolio/malaDeViagem.png"
     },
     {
+        "nome": "Teste Api",
+        "subtitulo": "JavaScript",
+        "path": "/portfolio/testeApi.png"
+    },
+    {
         "nome": "Intro Sectio",
         "subtitulo": "React.js",
         "path": "/portfolio/introSectio.png"

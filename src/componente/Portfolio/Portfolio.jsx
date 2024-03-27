@@ -1,7 +1,7 @@
 import CarrosselPort from './CarrosselPort/CarrosselPort';
 import styles from './Portfolio.module.scss';
 
-const Portfolio = ({ }) => {
+const Porttt = ({ }) => {
 
 	return (
 		<section className={styles.portfolio}>
@@ -14,4 +14,4 @@ const Portfolio = ({ }) => {
 };
 
 
-export default Portfolio;
+export default Porttt;
