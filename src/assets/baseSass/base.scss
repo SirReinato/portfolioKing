@@ -18,6 +18,10 @@ $colorBgAzulEscuro: #2F6A99;
     color: $colorText;
     font-family: $fontTexto;
     letter-spacing: .1em;
+    strong {
+        font-weight: bold;
+        color: $colorDestaque;
+    }
 }
 
 @mixin ConteinerPadrao {

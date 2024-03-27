@@ -2,7 +2,7 @@
 
 .home {
     @include ConteinerPadrao;
-    
+
     .banner {
         @include TextoBase;
         font-size: 1.6em;
@@ -10,11 +10,7 @@
         height: 245px;
         color: $colorText;
         margin-top: 12%;
-
-        strong {
-            font-weight: bold;
-            color: $colorDestaque;
-        }
+        
     }
 
     .myFace{
