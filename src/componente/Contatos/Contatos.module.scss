@@ -1,0 +1,24 @@
+@import '../../assets/baseSass/base.scss';
+
+.contatos {
+  width: 184px;
+  height: 40;
+  position: absolute;
+  right: 6%;
+  bottom: 11%;
+  display: flex;  
+  justify-content: space-between;
+  align-items: center;
+
+  .lista{
+    width: 40px;
+    height: 40px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    background-color: $colorBgAzulEscuro;
+  }
+}
