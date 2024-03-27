@@ -1,10 +1,13 @@
 import styles from './Home.module.scss';
 
-const Home = ({}) => {
+const Home = ({ }) => {
 	return (
-		<div className={styles.home}>
- 			Home works!
- 		</div>
+		<section className={styles.home}>
+			<h2 className={styles.banner}>
+				Olá, sou  um <strong>Desenvolvedor Front-end</strong> apaixonado por criar experiências digitais incríveis, meu objetivo é transformar ideias em realidade, utilizando as melhores práticas de design e código.
+			</h2>
+			<img src="/myFace.png" alt="minha carocha" className={styles.myFace} />
+		</section>
 	);
 };
 

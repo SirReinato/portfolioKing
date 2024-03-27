@@ -1,3 +1,6 @@
+@import "../../assets/baseSass/base.scss";
+
 .sobre {
-  
+    @include ConteinerPadrao;
+    
 }
