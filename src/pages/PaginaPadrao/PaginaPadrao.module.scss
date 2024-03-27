@@ -2,5 +2,81 @@
 
 
 .paginapadrao {
-  
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    background: rgb(6, 2, 47);
+    background: linear-gradient(140deg, rgba(6, 2, 47, 1) 100%, rgba(6, 2, 47, 1) 90%);
+
+    header {
+        width: 100%;
+        height: 10%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        nav{
+            width: 100%;
+        }
+
+        &::after {
+            content: "";
+            display: block;
+            margin: 0 auto;
+            width: 76%;
+            border: 2px solid $colorDestaque;
+        }
+    }
+
+    main {
+        width: 100%;
+        height: 80%;
+        display: flex;
+        justify-content: space-between;
+        color: aqua;
+
+        .divBefore {
+            width: 5%;
+            height: 100%;
+            display: flex;
+            justify-content: right;
+
+            &::after {
+                content: "";
+                margin: auto 0;
+                height: 100%;
+                border: 2px solid $colorDestaque;
+            }
+        }
+        .divAfter{
+            width: 5%;
+            height: 100%;
+            display: flex;
+            &::before {
+                content: "";
+                margin: auto 0px;
+                height: 100%;
+                border: 2px solid $colorDestaque;
+            }
+        }
+
+    }
+
+    footer {
+        width: 100%;
+        height: 10%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &::before {
+            content: "";
+            display: block;
+            margin: 0 auto 15px auto;
+            width: 76%;
+            border: 2px solid $colorDestaque;
+        }
+    }
 }
