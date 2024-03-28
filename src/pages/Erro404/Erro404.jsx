@@ -1,10 +1,11 @@
+import Header from '../../componente/Header/Header';
 import styles from './Erro404.module.scss';
 
-const Erro404 = ({}) => {
+const Erro404 = ({ }) => {
 	return (
-		<div className={styles.erro404}>
- 			Erro404 works!
- 		</div>
+		<section className={styles.erro404}>
+			
+		</section>
 	);
 };
 

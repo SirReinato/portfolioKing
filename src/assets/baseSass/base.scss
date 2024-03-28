@@ -7,16 +7,19 @@ $colorTextDestaque: #63C1A4;
 $colorDestaque: #B6EADA;
 $colorAzulBg: #2F6A99;
 $colorBgAzulEscuro: #2F6A99;
+$colorGradienteDark: linear-gradient(140deg, rgba(6, 2, 47, 1) 100%, rgba(6, 2, 47, 1) 90%);
 
 @mixin Titulo {
     font-size: 2rem;
     color: $colorTextDestaque;
     font-weight: bold;
 }
+
 @mixin TextoBase {
     color: $colorText;
     font-family: $fontTexto;
     letter-spacing: .1em;
+
     strong {
         font-weight: bold;
         color: $colorDestaque;
@@ -30,5 +33,11 @@ $colorBgAzulEscuro: #2F6A99;
     align-items: center;
     padding: 0 128px;
     box-sizing: border-box;
-    gap: 120px; 
+    gap: 120px;
+
+    @media (max-width: 660px) {
+        width: 80%;
+        padding: 0 12px;
+        gap: 12px;
+    }
 }

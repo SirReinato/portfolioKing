@@ -4,9 +4,11 @@
   margin-bottom: 10px;
 }
 .asli {
-    font-size: 14px;
+    font-size: 0.875rem;
     color: $colorText;
     font-weight: bold;
-
+    @media (max-width: 660px) {
+      font-size: 0.65rem;
+      }
 }
 

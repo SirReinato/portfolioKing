@@ -1,7 +1,9 @@
+@import "../../../assets/baseSass/base.scss";
+
 .sliderContainer {
     width: 100%;
     height: 180px;
     padding: 32px;
-    background-color: aqua;
+    background-color: $colorText;
     border-radius: 20px;
 }
