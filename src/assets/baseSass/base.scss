@@ -9,8 +9,7 @@ $colorAzulBg: #2F6A99;
 $colorBgAzulEscuro: #2F6A99;
 
 @mixin Titulo {
-    font-size: 32px;
-    font-family: $fontPrincipal;
+    font-size: 2rem;
     color: $colorTextDestaque;
     font-weight: bold;
 }

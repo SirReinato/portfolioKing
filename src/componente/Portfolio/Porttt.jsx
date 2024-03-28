@@ -1,5 +1,5 @@
 import CarrosselPort from './CarrosselPort/CarrosselPort';
-import styles from './Portfolio.module.scss';
+import styles from './Porttt.module.scss';
 
 const Porttt = ({ }) => {
 

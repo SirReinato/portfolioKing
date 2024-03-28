@@ -4,10 +4,22 @@
     @include ConteinerPadrao;
 
     .sobremin {
+        h1{
+            @include Titulo;
+            font-size: $fontTexto;
+            margin-bottom: 16px
+        }
         @include TextoBase;
-        font-size: .9em;
+        font-size: .7em;
         margin-top: 16%;
+        line-height: 16px;
         width: 40%;
+        @media (min-width: 1400px) {
+        font-size: 1.3em;
+        line-height: 20px;
+        margin-top: 12%;
+            
+        }
     }
 
     .habilidade {
@@ -43,5 +55,10 @@
         &::-moz-scrollbar-thumb {
             background-color: $colorBgAzulEscuro;
         }
+
+        @media (min-width: 1400px) {
+            width: 25%;
+          
+            }
     }
 }

@@ -1,42 +1,59 @@
 [
-    {
-        "nome": "Mala de Viagem 2.0",
-        "subtitulo": "React.js",
-        "path": "/portfolio/malaDeViagem2.0.png"
-    },
-    {
-        "nome": "MainVeigar",
-        "subtitulo": "React.js",
-        "path": "/portfolio/mainVeigar.png"
-    },
-    {
-        "nome": "Finanças Fáceis",
-        "subtitulo": "React.js",
-        "path": "/portfolio/financas.png"
-    },
-    {
-        "nome": "O melhor do trigo",
-        "subtitulo": "React.js",
-        "path": "/portfolio/oMelhorDoTrigo.png"
-    },
-    {
-        "nome": "News Home Page",
-        "subtitulo": "HTML CSS JS",
-        "path": "/portfolio/newsHome.png"
-    },
-    {
-        "nome": "Mala de Viagem",
-        "subtitulo": "React.js",
-        "path": "/portfolio/malaDeViagem.png"
-    },
-    {
-        "nome": "Teste Api",
-        "subtitulo": "JavaScript",
-        "path": "/portfolio/testeApi.png"
-    },
-    {
-        "nome": "Intro Sectio",
-        "subtitulo": "React.js",
-        "path": "/portfolio/introSectio.png"
-    }
+  {
+    "id": 1,
+    "nome": "Livro De Receitas",
+    "subtitulo": "React.js",
+    "path": "/portfolio/livroReceitas.png",
+    "url": "https://livro-de-receitas-2-0.vercel.app/"
+  },
+  {
+    "id": 2,
+    "nome": "Mala de Viagem 2.0",
+    "subtitulo": "React.js",
+    "path": "/portfolio/malaDeViagem2.0.png",
+    "url": "https://mala-de-viagem2-0.vercel.app/"
+  },
+  {
+    "id": 3,
+    "nome": "Finanças Fáceis",
+    "subtitulo": "React.js",
+    "path": "/portfolio/financas.png",
+    "url": "https://2-0-financas-faceis.vercel.app/"
+  },
+  {
+    "id": 4,
+    "nome": "MainVeigar",
+    "subtitulo": "React.js",
+    "path": "/portfolio/mainVeigar.png",
+    "url": "https://main-veigar.vercel.app/"
+  },
+
+  {
+    "id": 5,
+    "nome": "News Home Page",
+    "subtitulo": "HTML CSS JS",
+    "path": "/portfolio/newsHome.png",
+    "url": "https://sirreinato.github.io/NewsHomePage/"
+  },
+  {
+    "id": 6,
+    "nome": "Mala de Viagem",
+    "subtitulo": "React.js",
+    "path": "/portfolio/malaDeViagem.png",
+    "url": "https://sirreinato.github.io/Mala-de-Viagem/"
+  },
+  {
+    "id": 7,
+    "nome": "Teste Api",
+    "subtitulo": "JavaScript",
+    "path": "/portfolio/testeApi.png",
+    "url": "https://testes-api.vercel.app/"
+  },
+  {
+    "id": 8,
+    "nome": "Intro Sectio",
+    "subtitulo": "React.js",
+    "path": "/portfolio/introSectio.png",
+    "url": "https://sirreinato.github.io/Intro-Section/"
+  }
 ]

@@ -6,19 +6,19 @@
     flex-direction: column;
     align-items: center;
     gap: 8px;
-
+    margin-top: 90px;
     .portTitle {
         @include Titulo;
     }
 
     .portBanner {
-        width: 100%;
+        width: 60%;
         height: 280px;
         display: flex;
         justify-content: center;
         align-items: center;
-        background: rgb(162, 202, 234);
-        background: linear-gradient(329deg, rgba(162, 202, 234, 1) 0%, rgba(162, 202, 234, 1) 100%);
+        // background: rgb(162, 202, 234);
+        // background: linear-gradient(329deg, rgba(162, 202, 234, 1) 0%, rgba(162, 202, 234, 1) 100%);
     }
 
 

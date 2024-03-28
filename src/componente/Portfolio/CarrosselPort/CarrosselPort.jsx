@@ -9,11 +9,11 @@ const CarrosselPort = ({ }) => {
 		dots: true,
 		infinite: true,
 		adaptativeHeight: false,
-		slidesToShow: 2,
-		slidesToScroll: 1,
+		slidesToShow: 3,
+		slidesToScroll: 2,
 		autoplay: true,
-		speed: 2000,
-		autoplaySpeed: 2000
+		speed: 3000,
+		autoplaySpeed: 3000
 	};
 
 	return (

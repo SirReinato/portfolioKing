@@ -1,3 +1,5 @@
+@import '../../assets/baseSass/base.scss';
+
 .portfolio {
-  
+  @include ConteinerPadrao;
 }
