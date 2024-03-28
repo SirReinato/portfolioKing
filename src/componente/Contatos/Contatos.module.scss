@@ -1,4 +1,4 @@
-@import '../../assets/baseSass/base.scss';
+ @import '../../assets/baseSass/base.scss';
 
 .contatos {
   width: 184px;
@@ -9,7 +9,10 @@
   display: flex;  
   justify-content: space-between;
   align-items: center;
-
+@media (max-width: 660px) {
+  bottom: 16%;
+  right: 11%;
+}
   .lista{
     width: 40px;
     height: 40px;

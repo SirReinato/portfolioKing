@@ -4,21 +4,35 @@
     @include ConteinerPadrao;
 
     .sobremin {
-        h1{
+        width: 70%;
+
+        @media only screen and (min-width: 661px) and (max-width: 986px) {
+            width: 90%;
+
+            margin-top: 20%;
+        }
+
+        h1 {
             @include Titulo;
             font-size: $fontTexto;
-            margin-bottom: 16px
+            margin-bottom: 16px;
+
         }
-        @include TextoBase;
-        font-size: .7em;
-        margin-top: 16%;
-        line-height: 16px;
-        width: 40%;
-        @media (min-width: 1400px) {
-        font-size: 1.3em;
-        line-height: 20px;
-        margin-top: 12%;
-            
+
+        p {
+
+            @include TextoBase;
+            font-size: .7em;
+            margin-top: 16%;
+            line-height: 16px;
+            width: 100%;
+
+            @media (min-width: 1400px) {
+                font-size: 1rem;
+                line-height: 20px;
+                margin-top: 12%;
+
+            }
         }
     }
 
@@ -26,12 +40,26 @@
         width: 30%;
         height: 62%;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         flex-wrap: wrap;
         column-gap: 8px;
         margin-top: 8%;
         row-gap: 32px;
         overflow: scroll;
+
+        @media only screen and (min-width: 661px) and (max-width: 986px) {
+            width: 34%;
+            height: 62%;
+        }
+
+        @media (max-width:660px) {
+            position: absolute;
+            right: 12%;
+            top: 16%;
+            width: 80px;
+            height: 40%;
+
+        }
 
         &::-webkit-scrollbar {
             width: 2px;
@@ -44,8 +72,9 @@
         }
 
         &::-webkit-scrollbar-thumb:hover {
-            background-color: $colorAzulBg; /* Color of the thumb on hover */
-          }
+            background-color: $colorAzulBg;
+            /* Color of the thumb on hover */
+        }
 
         &::-moz-scrollbar {
             width: 0px;
@@ -58,7 +87,7 @@
 
         @media (min-width: 1400px) {
             width: 25%;
-          
-            }
+
+        }
     }
 }

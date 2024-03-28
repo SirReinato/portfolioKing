@@ -13,6 +13,10 @@ $colorGradienteDark: linear-gradient(140deg, rgba(6, 2, 47, 1) 100%, rgba(6, 2, 
     font-size: 2rem;
     color: $colorTextDestaque;
     font-weight: bold;
+
+    @media (max-width: 660px) {
+        font-size: 1.4rem;
+    }
 }
 
 @mixin TextoBase {
@@ -24,6 +28,8 @@ $colorGradienteDark: linear-gradient(140deg, rgba(6, 2, 47, 1) 100%, rgba(6, 2, 
         font-weight: bold;
         color: $colorDestaque;
     }
+
+
 }
 
 @mixin ConteinerPadrao {
@@ -34,6 +40,11 @@ $colorGradienteDark: linear-gradient(140deg, rgba(6, 2, 47, 1) 100%, rgba(6, 2, 
     padding: 0 128px;
     box-sizing: border-box;
     gap: 120px;
+
+    @media only screen and (min-width: 661px) and (max-width: 986px) {
+        padding: 0 64px;
+
+    }
 
     @media (max-width: 660px) {
         width: 80%;

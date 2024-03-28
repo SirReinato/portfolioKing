@@ -26,7 +26,7 @@ const PaginaPadrao = ({ }) => {
 
 				<div className={styles.divAfter}></div>
 			</main>
-			<footer>
+			<footer className={styles.padraoFooter}>
 				<img className={styles.duasBarrasFooter} src="/header/duasBarras.png" alt="duas barras"/>
 
 			</footer>
