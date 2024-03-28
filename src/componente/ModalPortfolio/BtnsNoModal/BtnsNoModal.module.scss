@@ -1,0 +1,9 @@
+@import "../../../assets/baseSass/base.scss";
+
+.btnsnomodal {
+  padding: 8px;
+  background-color: $colorText;
+  @include TextoBase;
+  font-size: 1rem;
+  border: none;
+}
