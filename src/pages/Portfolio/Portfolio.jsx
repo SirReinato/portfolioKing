@@ -2,17 +2,19 @@ import CarrosselPort from '../../componente/Portfolio/CarrosselPort/CarrosselPor
 import styles from './Portfolio.module.scss';
 import ModalPortfolio from "../../componente/ModalPortfolio/ModalPortfolio"
 import { useState } from 'react';
-
+import ReactDOM from 'react-dom';
 
 const Portfolio = ({ }) => {
+	const elementoRaiz = document.getElementById('root');
+
 	const [isOpen, setIsOpen] = useState(false);
 
 	function abrirModal() {
-	  setIsOpen(true);
+		setIsOpen(true);
 	}
-  
+
 	function fecharModal() {
-	  setIsOpen(false);
+		setIsOpen(false);
 	}
 
 
@@ -25,7 +27,11 @@ const Portfolio = ({ }) => {
 					<CarrosselPort onClick={abrirModal} />
 				</div>
 			</div>
-			<ModalPortfolio fecharModal={fecharModal} isOpen={isOpen}/>
+			<ModalPortfolio
+				appElement={elementoRaiz}
+				fecharModal={fecharModal}
+				isOpen={isOpen}
+			/>
 		</section>
 	);
 };

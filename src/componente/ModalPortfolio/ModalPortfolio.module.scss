@@ -3,9 +3,11 @@
 .modalportfolio {
   width: 560px;
   height: 78%;
-  position: absolute;
-  top: 11%;
-  left: 29%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
   box-sizing: border-box;
   border-radius: 16px;
   padding: 16px;
@@ -18,15 +20,6 @@
     width: 80%;
     gap: 8px;
   }
-  .blackout{
-    position: absolute;
-    top: -14.6%;
-    left: -71%;
-    width: 100vw;
-    height: 100vh;
-    z-index: -1;
-    background-color: rgba(0, 0, 0, 0.5);
-  }
 
   .conteinerModal {
     width: 100%;
@@ -36,12 +29,13 @@
     flex-direction: column;
     align-items: center;
     gap: 16px;
+
     .fotoSite {
       width: 320px;
       height: 240px;
       border-radius: 16px;
       margin: 0 auto;
-      background-color: red;
+      background-color: #000;
     }
 
     .btnFechar {
@@ -49,6 +43,7 @@
       height: 32px;
       position: absolute;
       right: 8px;
+      cursor: pointer;
       top: 8px;
       display: flex;
       justify-content: center;
@@ -60,12 +55,14 @@
     .seuNome {
       @include Titulo;
     }
-    .descricao{
+
+    .descricao {
       @include TextoBase;
       font-size: 1rem;
 
     }
-    .btnFooter{
+
+    .btnFooter {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -74,6 +71,16 @@
   }
 }
 
-.is-active{
-  display: block;
+.modalportfolio {
+  @keyframes slide-in {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  animation: slide-in 0.5s ease-in-out;
 }

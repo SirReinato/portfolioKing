@@ -4,9 +4,8 @@ import styles from './ModalPortfolio.module.scss';
 import Modal from 'react-modal';
 import { DescricaoModalContext } from '../../context/DescricaoModalContext';
 
-const ModalPortfolio = ({isOpen, fecharModal}) => {
+const ModalPortfolio = ({isOpen, fecharModal,appElement}) => {
 	const {dadosModal} = useContext(DescricaoModalContext)
-	console.log(dadosModal);
 	return (
 		<Modal 
 			isOpen={isOpen}
@@ -16,6 +15,7 @@ const ModalPortfolio = ({isOpen, fecharModal}) => {
 				}
 			}}
 			className={styles.modalportfolio}
+			appElement={appElement}
 		>
 			<div className={styles.conteinerModal}>
 
