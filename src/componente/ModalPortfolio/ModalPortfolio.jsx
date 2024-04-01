@@ -11,7 +11,7 @@ const ModalPortfolio = ({isOpen, fecharModal,appElement}) => {
 			isOpen={isOpen}
 			style={{
 				overlay: {
-				  backgroundColor: 'rgba(0, 0, 0, 0.40)',
+				  backgroundColor: 'rgba(0, 0, 0, 0.70)',
 				}
 			}}
 			className={styles.modalportfolio}

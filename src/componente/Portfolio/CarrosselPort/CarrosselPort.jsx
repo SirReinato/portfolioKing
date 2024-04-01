@@ -9,7 +9,7 @@ const CarrosselPort = ({ onClick }) => {
 		dots: true,
 		infinite: true,
 		adaptativeHeight: false,
-		slidesToShow: 3,
+		slidesToShow: 4,
 		slidesToScroll: 2,
 		autoplay: true,
 		speed: 3000,
@@ -19,6 +19,22 @@ const CarrosselPort = ({ onClick }) => {
 				breakpoint: 1220,
 				settings: {
 					slidesToShow: 2,
+					slidesToScroll: 2,
+					initialSlide: 2
+				}
+			},
+			{
+				breakpoint: 1550,
+				settings: {
+					slidesToShow: 3,
+					slidesToScroll: 2,
+					initialSlide: 2
+				}
+			},
+			{
+				breakpoint: 1600,
+				settings: {
+					slidesToShow: 4,
 					slidesToScroll: 2,
 					initialSlide: 2
 				}

@@ -33,14 +33,13 @@
             margin: 0 auto;
             width: 76%;
             border: 2px solid $colorDestaque;
+            animation: scale-down-hor-center 120s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite forwards;
 
             @media (max-width: 660px) {
                 width: 60%;
             }
 
-            .elementoComAnimacao {
-                background-color: red;
-            }
+
         }
     }
 
@@ -63,14 +62,15 @@
 
             &::after {
                 content: "";
-                margin: auto 0;
-                height: 100%;
+                display: flex;
+                align-items: last baseline;
+                height: 95%;
+                margin: auto -8px auto 0;
+                color: $colorBgAzulEscuro;
+                font-size: 24px;
+                font-weight: bold;
                 border: 2px solid $colorDestaque;
-
-                .elementoComAnimacao {
-                    background-color: red;
-
-                }
+                animation: scale-down-ver-center 120s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite;
 
             }
         }
@@ -86,15 +86,29 @@
 
             &::before {
                 content: "";
-                margin: auto 0px;
-                height: 100%;
+                display: flex;
+                align-items: last baseline;
+                height: 95%;
+                margin: auto 0 auto -9px;
+                color: $colorBgAzulEscuro;
+                font-size: 64px;
+                font-weight: bold;
                 border: 2px solid $colorDestaque;
+                animation: scale-down-ver-center 120s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite;
 
-                .elementoComAnimacao {
-                    background-color: red;
+            }
+        }
 
-                }
 
+        @keyframes scale-down-ver-center {
+            0% {
+                -webkit-transform: scaleY(1);
+                transform: scaleY(1);
+            }
+
+            100% {
+                -webkit-transform: scaleY(0.3);
+                transform: scaleY(0.3);
             }
         }
 
@@ -115,6 +129,7 @@
             position: absolute;
             left: 6%;
             bottom: 2%;
+
             @media (max-width: 660px) {
                 width: 30px;
                 bottom: 12%;
@@ -128,13 +143,22 @@
             margin: 0 auto 15px auto;
             width: 76%;
             border: 2px solid $colorDestaque;
+            animation: scale-down-hor-center 120s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite forwards;
+
             @media (max-width: 660px) {
                 width: 60%;
             }
 
-            .elementoComAnimacao {
-                background-color: red;
-
+            @keyframes scale-down-hor-center {
+                0% {
+                    -webkit-transform: scaleX(1);
+                    transform: scaleX(1);
+                }
+    
+                100% {
+                    -webkit-transform: scaleX(0.3);
+                    transform: scaleX(0.3);
+                }
             }
 
         }

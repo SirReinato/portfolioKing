@@ -6,6 +6,7 @@
     .sobremin {
         width: 70%;
 
+        margin-top: 9%;
         @media only screen and (min-width: 661px) and (max-width: 986px) {
             width: 90%;
 
@@ -15,23 +16,21 @@
         h1 {
             @include Titulo;
             font-size: $fontTexto;
-            margin-bottom: 16px;
-
+            margin-bottom: 16px
+            
         }
 
         p {
 
             @include TextoBase;
-            font-size: .7em;
-            margin-top: 16%;
+            font-size: .8em;
             line-height: 16px;
             width: 100%;
+
 
             @media (min-width: 1400px) {
                 font-size: 1rem;
                 line-height: 20px;
-                margin-top: 12%;
-
             }
         }
     }
