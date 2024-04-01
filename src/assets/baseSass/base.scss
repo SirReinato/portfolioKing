@@ -8,6 +8,7 @@ $colorDestaque: #B6EADA;
 $colorAzulBg: #2F6A99;
 $colorBgAzulEscuro: #2F6A99;
 $colorGradienteDark: linear-gradient(140deg, rgba(6, 2, 47, 1) 100%, rgba(6, 2, 47, 1) 90%);
+$colorGradienteTeste: linear-gradient(140deg, rgb(140, 135, 190) 100%,rgb(51, 34, 236) 90%);
 
 @mixin Titulo {
     font-size: 2rem;

@@ -1,27 +1,25 @@
+import { useContext } from 'react';
+import { DescricaoModalContext } from '../../../context/DescricaoModalContext';
 import styles from './CardPortfolio.module.scss';
 
-const CardPortfolio = ({path, nome, subtitulo, url, descricao, hadleClick}) => {
-	function pegarDadosEabrirModal(nome, path, url, descricao, hadleClick) {
-		const dados = {
-			nome: nome,
-			path: path,
-			url: url,
-			descricao: descricao
-		}
-		hadleClick = true;
+const CardPortfolio = ({ path, nome, subtitulo, descricao, url, onClick }) => {
+	const {setDadosModal} = useContext(DescricaoModalContext)
 
-		return dados, hadleClick
-	}
 	return (
-		<figure 
-			onClick={pegarDadosEabrirModal(path, nome, subtitulo, url, descricao, hadleClick)} 
-			className={styles.cardportfolio}>
- 			<img className={styles.imgCard} src={path} alt={nome} />
-			<figcaption  className={styles.cardTextos}>
-				<h3 className={styles.tituloCard}>{nome}</h3>
-				<p className={styles.subCard}>{subtitulo}</p>
-			</figcaption>
- 		</figure>
+		<div onClick={()=> setDadosModal({path, nome, subtitulo, descricao, url})}>
+			<figure
+				onClick={onClick}
+				className={styles.cardportfolio}
+			>
+				<img className={styles.imgCard} src={path} alt={nome} />
+				<figcaption className={styles.cardTextos}>
+					<h3 className={styles.tituloCard}>{nome}</h3>
+					<p className={styles.subCard}>{subtitulo}</p>
+				</figcaption>
+
+			</figure>
+
+		</div>
 	);
 };
 
