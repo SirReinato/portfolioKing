@@ -6,7 +6,7 @@ const Home = ({ }) => {
 			<h2 className={styles.banner}>
 				Olá, sou  um <strong>Desenvolvedor Front-end</strong> apaixonado por criar experiências digitais incríveis, meu objetivo é transformar ideias em realidade, utilizando as melhores práticas de design e código.
 			</h2>
-			<img src="/myFace.png" alt="minha carocha" className={styles.myFace} />
+			<img src="/minhaCara.png" alt="minha carocha" className={styles.myFace} />
 		</section>
 	);
 };
