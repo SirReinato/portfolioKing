@@ -2,7 +2,6 @@ import CarrosselPort from '../../componente/Portfolio/CarrosselPort/CarrosselPor
 import styles from './Portfolio.module.scss';
 import ModalPortfolio from "../../componente/ModalPortfolio/ModalPortfolio"
 import { useState } from 'react';
-import ReactDOM from 'react-dom';
 
 const Portfolio = ({ }) => {
 	const elementoRaiz = document.getElementById('root');
