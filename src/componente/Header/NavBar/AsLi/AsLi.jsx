@@ -3,12 +3,12 @@ import styles from './AsLi.module.scss';
 
 const AsLi = ({ to, nome }) => {
 	return (
-		<NavLink 
+		<NavLink
 			to={`/${to}`}
-			className={({isActive}) => `
+			className={({ isActive }) => `
 				${isActive ? styles.destaque : ""}
 			`}
-		
+
 		>
 			<li className={styles.asli}>
 				{nome}

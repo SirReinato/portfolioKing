@@ -1,3 +1,5 @@
+@import '../../../assets/baseSass/base.scss';
+
 .navbar {
     max-width: 349px;
     height: 30px;
@@ -10,6 +12,13 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-
+        .ancora {
+            font-size: 0.875rem;
+            color: $colorText;
+            font-weight: bold;
+            @media (max-width: 660px) {
+              font-size: 0.65rem;
+              }
+        }
     }
 }

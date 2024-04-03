@@ -10,7 +10,8 @@ const NavBar = ({ }) => {
 				<AsLi nome={'HOME'} to={''}/>
 				<AsLi nome={'SOBRE'} to={'sobre'}/>
 				<AsLi nome={'PORTFÓLIO'} to={'portfolio'}/>
-				<AsLi nome={'DOWLOAD CV'} to={'*'}/>
+				<a className={styles.ancora} href="https://drive.google.com/file/d/1X0SquVojfTu_a_7qAs5TLAux4YUk9jmt/view?usp=sharing" download="cb-renato-franca.pdf" target='_blank'>DOWLOAD CV</a>
+
 			</ul>
 		</nav>
 	);
