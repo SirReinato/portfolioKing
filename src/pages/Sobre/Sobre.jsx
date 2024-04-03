@@ -1,8 +1,8 @@
 import styles from './Sobre.module.scss';
-import habilidades from '../../json/habilidades.json';
 import CardHabilidades from '../../componente/CardHabilidades/CardHabilidades';
 
 const Sobre = ({ }) => {
+	const habilidades = ["JavaScript", "React.js", "Next.js", "Node.js", "Sass", "Figma", "Bootstrap"]
 	return (
 		<section className={styles.sobre}>
 			<div className={styles.sobremin}>
@@ -13,7 +13,7 @@ const Sobre = ({ }) => {
 			<div className={styles.habilidade}>
 				{habilidades.map(dados => {
 					return (
-						<CardHabilidades {...dados} key={dados.nome} />
+						<CardHabilidades nome={dados} key={dados.nome} />
 					)
 				})}
 			</div>

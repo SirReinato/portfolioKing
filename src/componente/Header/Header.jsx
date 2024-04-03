@@ -5,7 +5,7 @@ const Header = ({}) => {
 	return (
 		<div className={styles.header}>
 			<NavBar/>
-			<img className={styles.duasBarraHeader} src="/header/duasBarras.png" alt="duasBarras" />
+			<img className={styles.duasBarraHeader} src="/header/mobile.png" alt="duasBarras" />
  		</div>
 	);
 };

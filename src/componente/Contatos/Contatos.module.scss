@@ -15,14 +15,18 @@
   right: 14%;
 }
   .lista{
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     border-radius: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 2px solid $colorDestaque;
 
-
-    background-color: $colorDestaque;
+    // background-color: $colorDestaque;
+    img{
+      width: 25px;
+      height: 25px;
+    }
   }
 }

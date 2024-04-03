@@ -3,13 +3,8 @@ import styles from './PaginaPadrao.module.scss';
 import Logo from '../../componente/Logo/Logo';
 import Contatos from '../../componente/Contatos/Contatos';
 import Header from '../../componente/Header/Header';
-import { useEffect } from 'react';
-import { animacaoCores } from '../../assets/animacao/elementosAnimados';
 
 const PaginaPadrao = ({ }) => {
-	useEffect(() => {
-		animacaoCores();
-	  }, []);
 
 	return (
 		
@@ -27,7 +22,7 @@ const PaginaPadrao = ({ }) => {
 				<div className={styles.divAfter}></div>
 			</main>
 			<footer className={styles.padraoFooter}>
-				<img className={styles.duasBarrasFooter} src="/header/duasBarras.png" alt="duas barras"/>
+				<img className={styles.duasBarrasFooter} src="notebook.png" alt="um notebook em pixel art"/>
 
 			</footer>
 		</section>

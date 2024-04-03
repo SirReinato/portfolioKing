@@ -1,10 +1,10 @@
 import styles from './CardHabilidades.module.scss';
 
-const CardHabilidades = ({path, nome}) => {
+const CardHabilidades = ({nome}) => {
 	return (
-		<figure className={styles.cardhabilidades}>
- 			<img className={styles.logoHabilidade} src={path} alt={nome} />
- 		</figure>
+		<h3 className={styles.cardhabilidades}>
+			{nome}
+ 		</h3>
 	);
 };
 

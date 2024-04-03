@@ -7,8 +7,9 @@
 
 
     .duasBarraHeader {
+        width: 60px;
         margin-right: 6%;
-        margin-bottom: 18px;
+        margin-bottom: 0px;
 
         @media (max-width: 660px) {
             width: 30px;
