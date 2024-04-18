@@ -1,5 +1,12 @@
 [
   {
+    "id": 0,
+    "nome": "King Of Case",
+    "subtitulo": "React.js",
+    "path": "/portfolio/kingOfCase.png",
+    "url": "https://king-of-case-4n9fjwyp1-renato-franas-projects.vercel.app/"
+  },
+  {
     "id": 1,
     "nome": "Livro De Receitas",
     "subtitulo": "React.js",
