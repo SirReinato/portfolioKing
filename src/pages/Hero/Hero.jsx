@@ -1,4 +1,4 @@
-﻿import React, { useRef } from 'react';
+import React, { useRef } from 'react';
 import styled, { keyframes } from 'styled-components';
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
 
@@ -489,7 +489,8 @@ const Hero = () => {
                 </svg>
               </PrimaryButton>
               <SecondaryButton
-                href="https://drive.google.com/file/d/1pdQ3nIZrfFeSjGTQSktXzA5_yCrdKZ2d/view?usp=sharing"
+                href="/curriculo-renato-franca.pdf"
+                download="curriculo-renato-franca.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}

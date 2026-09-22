@@ -43,7 +43,7 @@ const NAV_LINKS = [
   { label: 'Portfólio', href: '#portfolio' },
   {
     label: 'Download CV',
-    href: 'https://drive.google.com/file/d/1pdQ3nIZrfFeSjGTQSktXzA5_yCrdKZ2d/view?usp=sharing',
+    href: '/curriculo-renato-franca.pdf',
     external: true,
   },
 ];
