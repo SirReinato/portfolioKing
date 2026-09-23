@@ -1,11 +1,74 @@
 [
-  {"id": 0, "nome": "King Of Case", "subtitulo": "React.js", "path": "/portfolio/kingOfCase.png", "url": "https://king-of-case.vercel.app/"},
-  {"id": 1, "nome": "Livro De Receitas", "subtitulo": "React.js", "path": "/portfolio/livroReceitas.png", "url": "https://livro-de-receitas-2-0.vercel.app/"},
-  {"id": 2, "nome": "Mala de Viagem 2.0", "subtitulo": "React.js", "path": "/portfolio/malaDeViagem2.0.png", "url": "https://mala-de-viagem2-0.vercel.app/"},
-  {"id": 3, "nome": "Finanças Fáceis", "subtitulo": "React.js", "path": "/portfolio/financas.png", "url": "https://2-0-financas-faceis.vercel.app/"},
-  {"id": 4, "nome": "MainVeigar", "subtitulo": "React.js", "path": "/portfolio/mainVeigar.png", "url": "https://main-veigar.vercel.app/"},
-  {"id": 5, "nome": "News Home Page", "subtitulo": "HTML CSS JS", "path": "/portfolio/newsHome.png", "url": "https://sirreinato.github.io/NewsHomePage/"},
-  {"id": 6, "nome": "Mala de Viagem", "subtitulo": "React.js", "path": "/portfolio/malaDeViagem.png", "url": "https://sirreinato.github.io/Mala-de-Viagem/"},
-  {"id": 7, "nome": "Teste Api", "subtitulo": "JavaScript", "path": "/portfolio/testeApi.png", "url": "https://testes-api.vercel.app/"},
-  {"id": 8, "nome": "Intro Sectio", "subtitulo": "React.js", "path": "/portfolio/introSectio.png", "url": "https://sirreinato.github.io/Intro-Section/"}
+  {
+    "id": 0,
+    "nome": "N1 GuidePro",
+    "subtitulo": "Next.js • Styled-Components • SSG",
+    "descricao": "Central inteligente de documentação técnica e procedimentos para suporte N1 com tutoriais passo a passo e interface moderna.",
+    "path": "/portfolio/n1GuidePro.png",
+    "url": "https://n1-guide-pro.vercel.app/"
+  },
+  {
+    "id": 1,
+    "nome": "Guia Econômico",
+    "subtitulo": "React 19 • Firebase • Webhook",
+    "descricao": "Dashboard financeiro pessoal com captura automática de despesas via Webhooks, regra 50/30/20 e projeção futura de saldo.",
+    "path": "/portfolio/financas.png",
+    "url": "https://guia-economico.vercel.app/"
+  },
+  {
+    "id": 2,
+    "nome": "Peças Mozi",
+    "subtitulo": "Next.js • Tailwind CSS • TypeScript",
+    "descricao": "Sistema de automação inteligente de petições iniciais trabalhistas para otimização do fluxo jurídico.",
+    "path": "/portfolio/kingOfCase.png",
+    "url": "https://pecas-mozi.vercel.app/"
+  },
+  {
+    "id": 3,
+    "nome": "King Of Case",
+    "subtitulo": "React.js • Framer Motion",
+    "descricao": "Aplicação web interativa modular desenvolvida com React e animações fluidas.",
+    "path": "/portfolio/kingOfCase.png",
+    "url": "https://king-of-case.vercel.app/"
+  },
+  {
+    "id": 4,
+    "nome": "Livro De Receitas",
+    "subtitulo": "React.js • REST APIs",
+    "descricao": "Catálogo de receitas com filtros por categoria e busca dinâmica integrada.",
+    "path": "/portfolio/livroReceitas.png",
+    "url": "https://livro-de-receitas-2-0.vercel.app/"
+  },
+  {
+    "id": 5,
+    "nome": "Mala de Viagem 2.0",
+    "subtitulo": "React.js",
+    "descricao": "Gerenciador interativo de bagagens e planejamento de viagens.",
+    "path": "/portfolio/malaDeViagem2.0.png",
+    "url": "https://mala-de-viagem2-0.vercel.app/"
+  },
+  {
+    "id": 6,
+    "nome": "MainVeigar",
+    "subtitulo": "React.js",
+    "descricao": "Projeto interativo temático com visualização dinâmica de dados.",
+    "path": "/portfolio/mainVeigar.png",
+    "url": "https://main-veigar.vercel.app/"
+  },
+  {
+    "id": 7,
+    "nome": "News Home Page",
+    "subtitulo": "HTML CSS JS",
+    "descricao": "Página moderna de notícias responsiva com layout dinâmico.",
+    "path": "/portfolio/newsHome.png",
+    "url": "https://sirreinato.github.io/NewsHomePage/"
+  },
+  {
+    "id": 8,
+    "nome": "Teste Api",
+    "subtitulo": "JavaScript",
+    "descricao": "Integração prática e testes de consumo de endpoints assíncronos.",
+    "path": "/portfolio/testeApi.png",
+    "url": "https://testes-api.vercel.app/"
+  }
 ]
