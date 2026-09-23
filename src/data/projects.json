@@ -12,7 +12,7 @@
     "nome": "Guia Econômico",
     "subtitulo": "React 19 • Firebase • Webhook",
     "descricao": "Dashboard financeiro pessoal com captura automática de despesas via Webhooks, regra 50/30/20 e projeção futura de saldo.",
-    "path": "/portfolio/financas.png",
+    "path": "/portfolio/guiaEconomico.png",
     "url": "https://guia-economico.vercel.app/"
   },
   {
@@ -20,7 +20,7 @@
     "nome": "Peças Mozi",
     "subtitulo": "Next.js • Tailwind CSS • TypeScript",
     "descricao": "Sistema de automação inteligente de petições iniciais trabalhistas para otimização do fluxo jurídico.",
-    "path": "/portfolio/kingOfCase.png",
+    "path": "/portfolio/pecasMozi.png",
     "url": "https://pecas-mozi.vercel.app/"
   },
   {
