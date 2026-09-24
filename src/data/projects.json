@@ -5,39 +5,44 @@
     "subtitulo": "Next.js • Styled-Components • SSG",
     "descricao": "Central inteligente de documentação técnica e procedimentos para suporte N1 com tutoriais passo a passo e interface moderna.",
     "path": "/portfolio/n1GuidePro.png",
-    "url": "https://n1-guide-pro.vercel.app/"
+    "url": "https://n1-guide-pro.vercel.app/",
+    "repo": "https://github.com/SirReinato/n1_guide_pro"
   },
   {
     "id": 1,
     "nome": "Guia Econômico",
     "subtitulo": "React 19 • Firebase • Webhook",
-    "descricao": "Dashboard financeiro pessoal com captura automática de despesas via Webhooks, regra 50/30/20 e projeção futura de saldo.",
+    "descricao": "Dashboard financeiro pessoal com captura automática de despesas via Webhooks em tempo real, regra 50/30/20 e projeção futura de saldo.",
     "path": "/portfolio/guiaEconomico.png",
-    "url": "https://guia-economico.vercel.app/"
+    "url": "https://guia-economico.vercel.app/",
+    "repo": "https://github.com/SirReinato/guiaEconomico-"
   },
   {
     "id": 2,
     "nome": "Peças Mozi",
     "subtitulo": "Next.js • Tailwind CSS • TypeScript",
-    "descricao": "Sistema de automação inteligente de petições iniciais trabalhistas para otimização do fluxo jurídico.",
+    "descricao": "Sistema de automação inteligente de petições iniciais trabalhistas para otimização e agilidade no fluxo jurídico.",
     "path": "/portfolio/pecasMozi.png",
-    "url": "https://pecas-mozi.vercel.app/"
+    "url": "https://pecas-mozi.vercel.app/",
+    "repo": "https://github.com/SirReinato/pecasMozi"
   },
   {
     "id": 3,
+    "nome": "Livro de Receitas 3.0",
+    "subtitulo": "React 19 • Vite • Tailwind CSS",
+    "descricao": "Evolução do guia culinário com Modo Cozinhar e timer integrado, calculadora inteligente de porções, checklist de ingredientes e busca em tempo real.",
+    "path": "/portfolio/livroReceitas3.png",
+    "url": "https://livro-de-receitas-3.vercel.app/",
+    "repo": "https://github.com/SirReinato/livroDeReceitas-3.0"
+  },
+  {
+    "id": 4,
     "nome": "King Of Case",
     "subtitulo": "React.js • Framer Motion",
     "descricao": "Aplicação web interativa modular desenvolvida com React e animações fluidas.",
     "path": "/portfolio/kingOfCase.png",
-    "url": "https://king-of-case.vercel.app/"
-  },
-  {
-    "id": 4,
-    "nome": "Livro De Receitas",
-    "subtitulo": "React.js • REST APIs",
-    "descricao": "Catálogo de receitas com filtros por categoria e busca dinâmica integrada.",
-    "path": "/portfolio/livroReceitas.png",
-    "url": "https://livro-de-receitas-2-0.vercel.app/"
+    "url": "https://king-of-case.vercel.app/",
+    "repo": "https://github.com/SirReinato"
   },
   {
     "id": 5,
@@ -45,7 +50,8 @@
     "subtitulo": "React.js",
     "descricao": "Gerenciador interativo de bagagens e planejamento de viagens.",
     "path": "/portfolio/malaDeViagem2.0.png",
-    "url": "https://mala-de-viagem2-0.vercel.app/"
+    "url": "https://mala-de-viagem2-0.vercel.app/",
+    "repo": "https://github.com/SirReinato"
   },
   {
     "id": 6,
@@ -53,7 +59,8 @@
     "subtitulo": "React.js",
     "descricao": "Projeto interativo temático com visualização dinâmica de dados.",
     "path": "/portfolio/mainVeigar.png",
-    "url": "https://main-veigar.vercel.app/"
+    "url": "https://main-veigar.vercel.app/",
+    "repo": "https://github.com/SirReinato"
   },
   {
     "id": 7,
@@ -61,7 +68,8 @@
     "subtitulo": "HTML CSS JS",
     "descricao": "Página moderna de notícias responsiva com layout dinâmico.",
     "path": "/portfolio/newsHome.png",
-    "url": "https://sirreinato.github.io/NewsHomePage/"
+    "url": "https://sirreinato.github.io/NewsHomePage/",
+    "repo": "https://github.com/SirReinato/NewsHomePage"
   },
   {
     "id": 8,
@@ -69,6 +77,7 @@
     "subtitulo": "JavaScript",
     "descricao": "Integração prática e testes de consumo de endpoints assíncronos.",
     "path": "/portfolio/testeApi.png",
-    "url": "https://testes-api.vercel.app/"
+    "url": "https://testes-api.vercel.app/",
+    "repo": "https://github.com/SirReinato"
   }
 ]

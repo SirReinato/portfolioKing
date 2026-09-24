@@ -257,7 +257,7 @@ const ProjectModal = ({ isOpen, onClose, project }) => {
               {/* Botões de ação */}
               <ButtonGroup>
                 <ActionButton
-                  href="https://github.com/SirReinato"
+                  href={project.repo || 'https://github.com/SirReinato'}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
