@@ -102,6 +102,10 @@ src/
 
 ---
 
+## Mapa do código
+
+Instale a CLI oficial com `uv tool install graphifyy==0.9.96` e confirme que `graphify --version` está disponível no terminal. Na raiz do projeto, execute `npm run graphify` para gerar o mapa local de código. Abra `graphify-out/graph.html` no navegador.
+
 ## 📬 Contato
 
 - **Desenvolvedor:** Renato França
