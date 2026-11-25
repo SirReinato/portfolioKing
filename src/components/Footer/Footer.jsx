@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { motion } from 'framer-motion';
 import AnimatedSection from '../AnimatedSection/AnimatedSection';
 
@@ -62,7 +62,7 @@ const SocialLinks = styled.div`
 `;
 
 // Link social individual com círculo
-const SocialLink = styled(motion.a)`
+const SocialLinkStl = styled(motion.a)`
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -81,9 +81,44 @@ const SocialLink = styled(motion.a)`
     box-shadow: 0 0 20px rgba(182, 234, 218, 0.4);
   }
 
+  &:focus-visible {
+    outline: 2px solid ${({ theme }) => theme.colors.accent};
+    outline-offset: 4px;
+  }
+
   svg {
     width: 22px;
     height: 22px;
+  }
+`;
+
+const starOrbit = keyframes`
+  to { transform: rotate(1turn); }
+`;
+
+const StarBorderStl = styled(SocialLinkStl)`
+  position: relative;
+
+  @media (prefers-reduced-motion: no-preference) {
+    @supports (mask-image: radial-gradient(#000, transparent)) {
+      border-color: ${({ theme }) => theme.colors.glassBorder};
+
+      &::before {
+        content: '';
+        position: absolute;
+        inset: -2px;
+        border-radius: inherit;
+        pointer-events: none;
+        background: conic-gradient(
+          transparent 0deg 296deg,
+          ${({ theme }) => theme.colors.textHighlight} 344deg,
+          ${({ theme }) => theme.colors.accent} 358deg,
+          transparent 360deg
+        );
+        mask-image: radial-gradient(farthest-side, transparent calc(100% - 3px), #000 calc(100% - 2px));
+        animation: ${starOrbit} 3.6s linear infinite;
+      }
+    }
   }
 `;
 
@@ -96,6 +131,8 @@ const Copyright = styled.p`
   opacity: 0.7;
   margin-top: 1rem;
 `;
+
+const contactEmail = 'contato@francalabs.dev';
 
 // Dados dos links sociais
 const socialData = [
@@ -110,8 +147,8 @@ const socialData = [
     icon: <LinkedInIcon />,
   },
   {
-    href: 'mailto:',
-    label: 'Email',
+    href: `mailto:${contactEmail}`,
+    label: `Enviar e-mail para ${contactEmail}`,
     icon: <EmailIcon />,
   },
 ];
@@ -131,23 +168,28 @@ const Footer = () => {
           </FooterTitle>
 
           <SocialLinks>
-            {socialData.map((social, index) => (
-              <SocialLink
-                key={social.label}
-                href={social.href}
-                target={social.href.startsWith('mailto') ? '_self' : '_blank'}
-                rel="noopener noreferrer"
-                aria-label={social.label}
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-              >
-                {social.icon}
-              </SocialLink>
-            ))}
+            {socialData.map((social, index) => {
+              const isEmail = social.href.startsWith('mailto:');
+              const LinkStl = isEmail ? StarBorderStl : SocialLinkStl;
+
+              return (
+                <LinkStl
+                  key={social.label}
+                  href={social.href}
+                  target={isEmail ? '_self' : '_blank'}
+                  rel="noopener noreferrer"
+                  aria-label={social.label}
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.95 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: index * 0.1 }}
+                >
+                  {social.icon}
+                </LinkStl>
+              );
+            })}
           </SocialLinks>
 
           <Copyright>

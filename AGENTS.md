@@ -80,6 +80,8 @@ Use Node.js 22, conforme `.nvmrc`. O mínimo declarado no `package.json` é Node
 - Declare as props dos componentes com `prop-types` de acordo com o contrato de cada componente.
 - Use Framer Motion para as interações animadas e reaproveite `AnimatedSection` para revelações ao rolar. Ao editar interações, verifique o uso por teclado, o foco visível e o comportamento com preferência por movimento reduzido.
 - O Shiny Text do Hero faz uma passagem de brilho em Full-Stack. Esse efeito e o Spotlight são adaptados do React Bits para styled-components e respeitam `prefers-reduced-motion`.
+- O Logo Loop de Habilidades usa as marcas locais disponíveis em `public/habilidades/` e mantém todas as tecnologias em texto. Preserve o controle de pausa, a lista estática com movimento reduzido e a cópia decorativa fora da árvore de acessibilidade.
+- O Star Border destaca o link `mailto:contato@francalabs.dev` no rodapé. Preserve o destinatário, o foco visível e a borda estática com movimento reduzido.
 
 ## Validação e entrega
 
@@ -99,3 +101,4 @@ Use Node.js 22, conforme `.nvmrc`. O mínimo declarado no `package.json` é Node
 | 2026-11-25 | Atualização da apresentação, dos metadados e da vitrine para refletir o perfil full-stack, com Peças Mozi em primeiro destaque. |
 | 2026-11-25 | Configuração do MCP shadcn no Codex do projeto e do catálogo `@react-bits` para consulta. |
 | 2026-11-25 | Spotlight Card em Peças Mozi e Shiny Text em Full-Stack, com foco visível nos cards e suporte a movimento reduzido nos dois efeitos. |
+| 2026-11-25 | Logo Loop nas habilidades com controle de pausa e Star Border no link de contato `contato@francalabs.dev`. |
