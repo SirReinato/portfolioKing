@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { motion } from 'framer-motion';
+import { useState } from 'react';
+import styled, { keyframes } from 'styled-components';
 import AnimatedSection from '../../components/AnimatedSection/AnimatedSection';
 
 // ─── Styled Components ────────────────────────────────────────────────────────
@@ -31,14 +31,14 @@ const SectionTitle = styled.h2`
   }
 `;
 
-const ContentGrid = styled.div`
+const ContentGridStl = styled.div`
   display: grid;
-  grid-template-columns: 60% 40%;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
   gap: 3rem;
   align-items: start;
 
   @media (max-width: ${({ theme }) => theme.breakpoints?.tablet || '768px'}) {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 2.5rem;
   }
 `;
@@ -59,67 +59,109 @@ const AccentText = styled.span`
   font-weight: bold;
 `;
 
-const SkillsBlock = styled.div``;
-
-const SkillsTitle = styled.h3`
-  font-family: ${({ theme }) => theme.fonts?.heading || "'Jacques Francois Shadow', cursive"};
-  color: ${({ theme }) => theme.colors?.textHighlight || '#63C1A4'};
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
-`;
-
-const BadgeContainer = styled(motion.div)`
+const SkillsHeaderStl = styled.div`
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
 `;
 
-const Badge = styled(motion.span)`
-  background: ${({ theme }) => theme.colors?.cardBg || '#2F6A99'};
-  color: ${({ theme }) => theme.colors?.text || '#A2CAEA'};
-  padding: 10px 20px;
-  border-radius: 30px;
-  font-family: ${({ theme }) => theme.fonts?.body || "'Inter', sans-serif"};
-  font-size: 0.9rem;
-  font-weight: 500;
-  display: inline-block;
-  cursor: default;
-  border: 1px solid transparent;
-  transition: border-color 0.3s ease;
+const SkillsTitleStl = styled.h3`
+  font-family: ${({ theme }) => theme.fonts.heading};
+  color: ${({ theme }) => theme.colors.textHighlight};
+  font-size: 1.5rem;
+  margin: 0;
+`;
 
-  &:hover {
-    border-color: ${({ theme }) => theme.colors?.accent || '#B6EADA'};
+const LoopControlStl = styled.button`
+  padding: 0.35rem 0.75rem;
+  border: 1px solid ${({ theme }) => theme.colors.accent};
+  border-radius: 999px;
+  background: transparent;
+  color: ${({ theme }) => theme.colors.accent};
+  font: inherit;
+  font-size: 0.8rem;
+  cursor: pointer;
+
+  &:focus-visible {
+    outline: 2px solid ${({ theme }) => theme.colors.accent};
+    outline-offset: 3px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    display: none;
   }
 `;
 
-// ─── Variantes de animação para stagger dos badges ────────────────────────────
+const logoScroll = keyframes`
+  to { transform: translateX(-50%); }
+`;
 
-const badgeContainerVariants = {
-  hidden: {},
-  visible: {
-    transition: {
-      staggerChildren: 0.08,
-      delayChildren: 0.2,
-    },
-  },
-};
+const LogoTrackStl = styled.div`
+  @media (prefers-reduced-motion: no-preference) {
+    display: flex;
+    width: max-content;
+    animation: ${logoScroll} 30s linear infinite;
+    animation-play-state: ${({ $paused }) => ($paused ? 'paused' : 'running')};
+  }
+`;
 
-const badgeVariants = {
-  hidden: {
-    opacity: 0,
-    y: 20,
-    scale: 0.9,
-  },
-  visible: {
-    opacity: 1,
-    y: 0,
-    scale: 1,
-    transition: {
-      duration: 0.4,
-      ease: 'easeOut',
-    },
-  },
-};
+const LogoViewportStl = styled.div`
+  @media (prefers-reduced-motion: no-preference) {
+    overflow: hidden;
+    mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover ${LogoTrackStl} {
+      animation-play-state: paused;
+    }
+  }
+`;
+
+const LogoListStl = styled.ul`
+  display: flex;
+  flex-wrap: wrap;
+  flex: none;
+  gap: 0.65rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (prefers-reduced-motion: no-preference) {
+    flex-wrap: nowrap;
+    padding-inline-end: 0.65rem;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    &[aria-hidden='true'] {
+      display: none;
+    }
+  }
+`;
+
+const SkillBadgeStl = styled.li`
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 0.85rem;
+  border: 1px solid ${({ theme }) => theme.colors.glassBorder};
+  border-radius: 999px;
+  background: ${({ theme }) => theme.colors.cardBgDark};
+  color: ${({ theme }) => theme.colors.accent};
+  font-family: ${({ theme }) => theme.fonts.body};
+  font-size: 0.9rem;
+  font-weight: 500;
+  white-space: nowrap;
+
+  img {
+    width: 1.15rem;
+    height: 1.15rem;
+    object-fit: contain;
+  }
+`;
 
 // ─── Lista de habilidades ─────────────────────────────────────────────────────
 
@@ -136,9 +178,18 @@ const skills = [
   'Automação com IA',
 ];
 
+const skillIcons = {
+  JavaScript: '/habilidades/JavaScript.png',
+  React: '/habilidades/React.js.png',
+  'Next.js': '/habilidades/Next.js.png',
+  'Node.js': '/habilidades/Node.js.png',
+};
+
 // ─── Componente About ─────────────────────────────────────────────────────────
 
 const About = () => {
+  const [isLoopPaused, setIsLoopPaused] = useState(false);
+
   return (
     <AboutSection id="about">
       <Container>
@@ -146,7 +197,7 @@ const About = () => {
           <SectionTitle>Sobre mim</SectionTitle>
         </AnimatedSection>
 
-        <ContentGrid>
+        <ContentGridStl>
           {/* Bloco de texto à esquerda */}
           <AnimatedSection direction="left" delay={0.1}>
             <TextBlock>
@@ -171,29 +222,34 @@ const About = () => {
           </AnimatedSection>
 
           {/* Bloco de habilidades à direita */}
-          <AnimatedSection direction="right" delay={0.2}>
-            <SkillsBlock>
-              <SkillsTitle>Habilidades</SkillsTitle>
-              <BadgeContainer
-                variants={badgeContainerVariants}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, margin: '-50px' }}
+          <div>
+            <SkillsHeaderStl>
+              <SkillsTitleStl>Habilidades</SkillsTitleStl>
+              <LoopControlStl
+                type="button"
+                aria-controls="skills-loop"
+                aria-label={isLoopPaused ? 'Retomar animação das habilidades' : 'Pausar animação das habilidades'}
+                onClick={() => setIsLoopPaused((paused) => !paused)}
               >
-                {skills.map((skill) => (
-                  <Badge
-                    key={skill}
-                    variants={badgeVariants}
-                    whileHover={{ scale: 1.08, y: -3 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    {skill}
-                  </Badge>
+                {isLoopPaused ? 'Retomar' : 'Pausar'}
+              </LoopControlStl>
+            </SkillsHeaderStl>
+            <LogoViewportStl id="skills-loop">
+              <LogoTrackStl $paused={isLoopPaused}>
+                {['skills', 'visual-copy'].map((group) => (
+                  <LogoListStl key={group} role="list" aria-hidden={group === 'visual-copy' || undefined}>
+                    {skills.map((skill) => (
+                      <SkillBadgeStl key={skill}>
+                        {skillIcons[skill] && <img src={skillIcons[skill]} alt="" />}
+                        {skill}
+                      </SkillBadgeStl>
+                    ))}
+                  </LogoListStl>
                 ))}
-              </BadgeContainer>
-            </SkillsBlock>
-          </AnimatedSection>
-        </ContentGrid>
+              </LogoTrackStl>
+            </LogoViewportStl>
+          </div>
+        </ContentGridStl>
       </Container>
     </AboutSection>
   );

@@ -25,7 +25,7 @@ O portfólio passou por uma **repaginação de 100% da arquitetura e da experiê
 - **Glassmorphism Header:** Cabeçalho fixo moderno com desfoque de fundo (*backdrop-filter*) e menu responsivo animado para mobile.
 - **Barra de Progresso de Rolagem:** Indicador sutil e dinâmico de leitura no topo da página.
 - **Avatar 3D Interativo:** Retrato profissional de estúdio tech com anel gradiente giratório (*conic-gradient*), halo luminoso volumétrico, *badges* flutuantes e efeito de inclinação 3D (*Tilt*) que responde ao movimento do cursor.
-- **Seção Sobre & Habilidades:** Apresentação profissional com tags de habilidades animadas via *stagger children*.
+- **Seção Sobre & Habilidades:** Apresentação profissional com uma faixa de habilidades em loop, controle de pausa e lista estática com movimento reduzido.
 - **Vitrine de Projetos Renovada:** Grid responsivo e fluído com cards modernos e modal nativo com animações de entrada/saída via `AnimatePresence`.
 - **Performance de Alto Nível:** Zero dependências pesadas legadas (adeus Bootstrap, SCSS modules fragmentados, carrosséis pesados e modais externos).
 
@@ -123,6 +123,7 @@ Essa configuração permite consultar o catálogo. Ao incorporar um item, revise
 ## 📬 Contato
 
 - **Desenvolvedor:** Renato França
+- **E-mail:** `contato@francalabs.dev`, disponível no link com Star Border no rodapé.
 - **GitHub:** [@SirReinato](https://github.com/SirReinato)
 - **LinkedIn:** [Renato França](https://www.linkedin.com/in/renato-fran%C3%A7a-0014b3195/)
 
