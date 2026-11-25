@@ -125,13 +125,15 @@ const badgeVariants = {
 
 const skills = [
   'JavaScript',
-  'React.js',
+  'TypeScript',
+  'React',
   'Next.js',
   'Node.js',
-  'Sass',
-  'Figma',
-  'Bootstrap',
-  'Tailwind',
+  'APIs',
+  'Supabase',
+  'Firebase',
+  'Webhooks',
+  'Automação com IA',
 ];
 
 // ─── Componente About ─────────────────────────────────────────────────────────
@@ -149,27 +151,21 @@ const About = () => {
           <AnimatedSection direction="left" delay={0.1}>
             <TextBlock>
               <p>
-                Olá, me chamo <AccentText>Renato</AccentText>, sou um{' '}
-                <AccentText>Desenvolvedor Front-end</AccentText> apaixonado por
-                criar interfaces modernas, acessíveis e com experiências
-                incríveis para o usuário.
+                Sou <AccentText>desenvolvedor full-stack</AccentText>, com forte
+                experiência em front-end. Construo aplicações que integram a
+                interface, as regras de negócio e os dados.
               </p>
               <p>
-                Minha jornada no desenvolvimento web começou com a curiosidade de
-                entender como os sites funcionam, e desde então venho me
-                aprofundando em tecnologias como React, JavaScript e todo o
-                ecossistema front-end.
+                No <AccentText>Peças Mozi</AccentText>, desenvolvi um fluxo que
+                vai da triagem de documentos à exportação para Word, passando por
+                cálculos, geração assistida por IA e revisão humana.
               </p>
               <p>
-                Busco sempre escrever código limpo, organizado e performático,
-                seguindo as melhores práticas do mercado. Acredito que um bom
-                design aliado a uma boa implementação técnica é o que transforma
-                um projeto comum em algo extraordinário.
-              </p>
-              <p>
-                Quando não estou codando, gosto de estudar novas tecnologias,
-                contribuir com projetos open source e compartilhar conhecimento
-                com a comunidade dev.
+                No <AccentText>N1 GuidePro</AccentText>, integrei busca, APIs e
+                Supabase para organizar documentação de suporte. No{' '}
+                <AccentText>Guia Econômico</AccentText>, conectei um painel
+                financeiro a autenticação, armazenamento de dados e registro de
+                despesas via webhook.
               </p>
             </TextBlock>
           </AnimatedSection>

@@ -466,12 +466,12 @@ const Hero = () => {
 
           <motion.div variants={childVariants}>
             <Greeting>Olá, me chamo Renato França</Greeting>
-            <Highlight>Desenvolvedor Front-end</Highlight>
+            <Highlight>Desenvolvedor Full-Stack</Highlight>
           </motion.div>
 
           <motion.div variants={childVariants}>
             <Description>
-              Especializado em criar <strong>experiências digitais interativas, responsivas e de alta performance</strong>. Apaixonado por transformar ideias complexas em interfaces elegantes utilizando o ecossistema moderno de <strong>React, Next.js e JavaScript</strong>.
+              Desenvolvo <strong>aplicações web de ponta a ponta</strong>. Combino interfaces em React e Next.js com APIs, bancos de dados e automação para resolver problemas reais.
             </Description>
           </motion.div>
 
@@ -565,7 +565,7 @@ const Hero = () => {
             }}
           >
             <span>💻</span>
-            <span>Frontend & UX</span>
+            <span>APIs • Automação</span>
           </FloatingExpBadge>
 
           {/* Avatar com 3D tilt ao passar o mouse */}
@@ -590,7 +590,7 @@ const Hero = () => {
             <InnerMask>
               <ProfilePhoto
                 src="/minhaCara.png"
-                alt="Foto profissional de Renato França - Desenvolvedor Front-end"
+                alt="Retrato de Renato França"
                 loading="eager"
               />
             </InnerMask>

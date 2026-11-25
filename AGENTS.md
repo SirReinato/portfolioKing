@@ -58,7 +58,7 @@ Use Node.js 22, conforme `.nvmrc`. O mínimo declarado no `package.json` é Node
 | --- | --- |
 | `index.html` e `src/main.jsx` | Metadados da página e montagem do React. |
 | `src/App.jsx` | `ThemeProvider`, estilos globais, estrutura da página e métricas da Vercel. |
-| `src/pages/` | Seções `Hero` (`#home`), `About` (`#about`) e `Portfolio` (`#portfolio`). |
+| `src/pages/` | `Hero` (`#home`) e `About` (`#about`) apresentam o perfil full-stack. `Portfolio` (`#portfolio`) mostra os projetos em destaque. |
 | `src/components/` | Cabeçalho, menu responsivo, progresso de rolagem, cards, modal de projeto, animação de entrada e rodapé (`#contact`). |
 | `src/styles/theme.js` e `src/styles/GlobalStyles.js` | Tokens de design, breakpoints e estilos globais. |
 | `src/data/projects.json` | Catálogo local que alimenta a vitrine. |
@@ -92,3 +92,4 @@ Use Node.js 22, conforme `.nvmrc`. O mínimo declarado no `package.json` é Node
 | 2026-11-25 | Criação do guia do portfolioKing e registro da correção da âncora Sobre e da validação de lint e build. |
 | 2026-11-25 | Inclusão das seis regras obrigatórias do modelo, das convenções de estilo e das regras de validação e entrega. |
 | 2026-11-25 | Configuração de `npm run graphify` e geração do primeiro mapa local, com 161 nós, 294 arestas e 10 comunidades. |
+| 2026-11-25 | Atualização da apresentação, dos metadados e da vitrine para refletir o perfil full-stack, com Peças Mozi em primeiro destaque. |

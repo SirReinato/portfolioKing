@@ -7,7 +7,7 @@
 ![Deploy](https://img.shields.io/badge/deploy-vercel-06022F?style=for-the-badge&logo=vercel)
 
 <p align="center">
-  <b>Portfólio moderno de Desenvolvedor Front-end, focado em interatividade, performance e design de alto padrão.</b>
+  <b>Portfólio de Renato França, desenvolvedor full-stack com forte experiência em front-end, integrações e automação.</b>
 </p>
 
 [🌐 Acessar Portfólio Online](https://renato-franca.vercel.app/) • [💼 LinkedIn](https://www.linkedin.com/in/renato-fran%C3%A7a-0014b3195/) • [🐙 GitHub](https://github.com/SirReinato)
@@ -30,6 +30,12 @@ O portfólio passou por uma **repaginação de 100% da arquitetura e da experiê
 - **Performance de Alto Nível:** Zero dependências pesadas legadas (adeus Bootstrap, SCSS modules fragmentados, carrosséis pesados e modais externos).
 
 ---
+
+### Projetos em destaque
+
+- **Peças Mozi** reúne triagem de documentos, cálculos, geração assistida por IA, revisão humana e exportação para Word.
+- **N1 GuidePro** conecta documentação de suporte a busca, APIs e Supabase.
+- **Guia Econômico** integra um painel financeiro a autenticação, persistência e entrada de despesas por webhook.
 
 ## 🛠️ Tecnologias Utilizadas
 

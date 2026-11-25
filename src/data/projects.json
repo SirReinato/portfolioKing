@@ -1,9 +1,18 @@
 [
   {
+    "id": 2,
+    "nome": "Peças Mozi",
+    "subtitulo": "Next.js • TypeScript • IA",
+    "descricao": "Automação de petições trabalhistas, da triagem de documentos à exportação para Word. O fluxo reúne regras de cálculo, geração assistida por IA e revisão humana, com autenticação, permissões e armazenamento de dados.",
+    "path": "/portfolio/pecasMozi.png",
+    "url": "https://pecas-mozi.vercel.app/",
+    "repo": "https://github.com/SirReinato/pecasMozi"
+  },
+  {
     "id": 0,
     "nome": "N1 GuidePro",
-    "subtitulo": "Next.js • Styled-Components • SSG",
-    "descricao": "Central inteligente de documentação técnica e procedimentos para suporte N1 com tutoriais passo a passo e interface moderna.",
+    "subtitulo": "Next.js • Supabase • APIs",
+    "descricao": "Base de conhecimento para suporte N1 com busca, tutoriais, rotas de API e dados no Supabase. O fluxo de moderação permite revisar conteúdo gerado com IA antes da publicação.",
     "path": "/portfolio/n1GuidePro.png",
     "url": "https://n1-guide-pro.vercel.app/",
     "repo": "https://github.com/SirReinato/n1_guide_pro"
@@ -11,20 +20,11 @@
   {
     "id": 1,
     "nome": "Guia Econômico",
-    "subtitulo": "React 19 • Firebase • Webhook",
-    "descricao": "Dashboard financeiro pessoal com captura automática de despesas via Webhooks em tempo real, regra 50/30/20 e projeção futura de saldo.",
+    "subtitulo": "React 19 • Firebase • Webhooks",
+    "descricao": "Painel de finanças pessoais com autenticação, armazenamento de dados e registro automático de despesas via webhook. A interface mostra o orçamento pela regra 50/30/20 e a projeção de saldo.",
     "path": "/portfolio/guiaEconomico.png",
     "url": "https://guia-economico.vercel.app/",
     "repo": "https://github.com/SirReinato/guiaEconomico-"
-  },
-  {
-    "id": 2,
-    "nome": "Peças Mozi",
-    "subtitulo": "Next.js • Tailwind CSS • TypeScript",
-    "descricao": "Sistema de automação inteligente de petições iniciais trabalhistas para otimização e agilidade no fluxo jurídico.",
-    "path": "/portfolio/pecasMozi.png",
-    "url": "https://pecas-mozi.vercel.app/",
-    "repo": "https://github.com/SirReinato/pecasMozi"
   },
   {
     "id": 3,
