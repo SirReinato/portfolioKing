@@ -1,13 +1,13 @@
-import { useState, useRef, useCallback } from 'react';
+import { useState, useCallback } from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { motion } from 'framer-motion';
 
 /* ============================
    Estilos do Card de Projeto
    ============================ */
 
-const CardContainer = styled(motion.div)`
+const CardContainerStl = styled(motion.div)`
   position: relative;
   border-radius: 16px;
   overflow: hidden;
@@ -28,9 +28,48 @@ const CardContainer = styled(motion.div)`
       0 8px 32px rgba(99, 193, 164, 0.15),
       0 0 20px rgba(182, 234, 218, 0.08);
   }
+  ${({ $spotlight }) => $spotlight && css`
+    @media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+      &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        pointer-events: none;
+        background: radial-gradient(
+          circle 240px at var(--spotlight-x, 50%) var(--spotlight-y, 50%),
+          color-mix(in srgb, ${({ theme }) => theme.colors.accent} 28%, transparent),
+          transparent 75%
+        );
+        opacity: 0;
+        transition: opacity 0.25s ease;
+      }
+
+      &:hover::before {
+        opacity: 1;
+      }
+    }
+  `}
 `;
 
-const CardImage = styled.div`
+const CardActionStl = styled.button`
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  border-radius: inherit;
+  background: transparent;
+  cursor: inherit;
+
+  &:focus-visible {
+    outline: 2px solid ${({ theme }) => theme.colors.accent};
+    outline-offset: -3px;
+  }
+`;
+
+const CardImageStl = styled.div`
   width: 100%;
   height: 200px;
   overflow: hidden;
@@ -54,8 +93,10 @@ const CardImage = styled.div`
     transition: transform 0.4s ease;
   }
 
-  ${CardContainer}:hover & img {
-    transform: scale(1.05);
+  @media (hover: hover) and (prefers-reduced-motion: no-preference) {
+    ${CardContainerStl}:hover & img {
+      transform: scale(1.05);
+    }
   }
 `;
 
@@ -85,17 +126,22 @@ const CardSubtitle = styled.p`
    Componente ProjectCard
    ============================ */
 
-const ProjectCard = ({ path, nome, subtitulo, onClick }) => {
-  const cardRef = useRef(null);
+const ProjectCard = ({ path, nome, subtitulo, onClick, spotlight = false }) => {
   const [tilt, setTilt] = useState({ rotateX: 0, rotateY: 0 });
 
-  /* Calcula o efeito 3D tilt baseado na posição do mouse */
-  const handleMouseMove = useCallback((e) => {
-    if (!cardRef.current) return;
+  const handlePointerMove = useCallback((event) => {
+    if (event.pointerType !== 'mouse') return;
+    const card = event.currentTarget;
+    const rect = card.getBoundingClientRect();
+    const x = event.clientX - rect.left;
+    const y = event.clientY - rect.top;
 
-    const rect = cardRef.current.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
+    if (spotlight) {
+      card.style.setProperty('--spotlight-x', `${x}px`);
+      card.style.setProperty('--spotlight-y', `${y}px`);
+      return;
+    }
+
     const centerX = rect.width / 2;
     const centerY = rect.height / 2;
 
@@ -104,37 +150,39 @@ const ProjectCard = ({ path, nome, subtitulo, onClick }) => {
     const rotateX = ((centerY - y) / centerY) * 6;
 
     setTilt({ rotateX, rotateY });
-  }, []);
+  }, [spotlight]);
 
   /* Reseta o tilt quando o mouse sai do card */
-  const handleMouseLeave = useCallback(() => {
+  const handlePointerLeave = useCallback(() => {
     setTilt({ rotateX: 0, rotateY: 0 });
   }, []);
 
   return (
-    <CardContainer
-      ref={cardRef}
-      onClick={onClick}
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
-      style={{
+    <CardContainerStl
+      $spotlight={spotlight}
+      onPointerMove={handlePointerMove}
+      onPointerLeave={spotlight ? undefined : handlePointerLeave}
+      style={spotlight ? undefined : {
         transform: `perspective(800px) rotateX(${tilt.rotateX}deg) rotateY(${tilt.rotateY}deg)`,
       }}
-      whileHover={{ scale: 1.03 }}
-      whileTap={{ scale: 0.98 }}
+      whileHover={spotlight ? undefined : { scale: 1.03 }}
+      whileTap={spotlight ? undefined : { scale: 0.98 }}
       transition={{ type: 'spring', stiffness: 300, damping: 20 }}
     >
       {/* Imagem do projeto */}
-      <CardImage>
+      <CardImageStl>
         <img src={path} alt={nome} loading="lazy" />
-      </CardImage>
+      </CardImageStl>
 
       {/* Conteúdo textual do card */}
       <CardContent>
         <CardTitle>{nome}</CardTitle>
         <CardSubtitle>{subtitulo}</CardSubtitle>
       </CardContent>
-    </CardContainer>
+      {onClick && (
+        <CardActionStl type="button" aria-label={`Ver detalhes de ${nome}`} onClick={onClick} />
+      )}
+    </CardContainerStl>
   );
 };
 
@@ -143,6 +191,7 @@ ProjectCard.propTypes = {
   nome: PropTypes.string.isRequired,
   subtitulo: PropTypes.string,
   onClick: PropTypes.func,
+  spotlight: PropTypes.bool,
 };
 
 export default ProjectCard;
