@@ -1,4 +1,4 @@
-import React from 'react';
+import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
 
 /**
@@ -55,6 +55,15 @@ const AnimatedSection = ({
       {children}
     </motion.div>
   );
+};
+
+AnimatedSection.propTypes = {
+  children: PropTypes.node,
+  delay: PropTypes.number,
+  direction: PropTypes.string,
+  duration: PropTypes.number,
+  className: PropTypes.string,
+  style: PropTypes.object,
 };
 
 export default AnimatedSection;

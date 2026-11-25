@@ -138,8 +138,6 @@ const Portfolio = () => {
                 path={project.path}
                 nome={project.nome}
                 subtitulo={project.subtitulo}
-                descricao={project.descricao}
-                url={project.url}
                 onClick={() => handleCardClick(project)}
               />
             </motion.div>

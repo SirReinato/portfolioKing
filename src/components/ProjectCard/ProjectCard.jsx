@@ -1,4 +1,5 @@
 import { useState, useRef, useCallback } from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
@@ -84,7 +85,7 @@ const CardSubtitle = styled.p`
    Componente ProjectCard
    ============================ */
 
-const ProjectCard = ({ path, nome, subtitulo, descricao, url, onClick }) => {
+const ProjectCard = ({ path, nome, subtitulo, onClick }) => {
   const cardRef = useRef(null);
   const [tilt, setTilt] = useState({ rotateX: 0, rotateY: 0 });
 
@@ -135,6 +136,13 @@ const ProjectCard = ({ path, nome, subtitulo, descricao, url, onClick }) => {
       </CardContent>
     </CardContainer>
   );
+};
+
+ProjectCard.propTypes = {
+  path: PropTypes.string.isRequired,
+  nome: PropTypes.string.isRequired,
+  subtitulo: PropTypes.string,
+  onClick: PropTypes.func,
 };
 
 export default ProjectCard;
