@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import styled from 'styled-components';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -39,7 +39,7 @@ const mobileLinkVariants = {
 
 const NAV_LINKS = [
   { label: 'Home', href: '#home' },
-  { label: 'Sobre', href: '#sobre' },
+  { label: 'Sobre', href: '#about' },
   { label: 'Portfólio', href: '#portfolio' },
   {
     label: 'Download CV',

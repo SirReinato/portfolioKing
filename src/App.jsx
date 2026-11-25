@@ -1,4 +1,3 @@
-import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/react';

@@ -1,4 +1,5 @@
 import { useEffect, useCallback } from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -280,6 +281,19 @@ const ProjectModal = ({ isOpen, onClose, project }) => {
       )}
     </AnimatePresence>
   );
+};
+
+ProjectModal.propTypes = {
+  isOpen: PropTypes.bool.isRequired,
+  onClose: PropTypes.func.isRequired,
+  project: PropTypes.shape({
+    nome: PropTypes.string.isRequired,
+    subtitulo: PropTypes.string,
+    descricao: PropTypes.string,
+    path: PropTypes.string,
+    url: PropTypes.string,
+    repo: PropTypes.string,
+  }),
 };
 
 export default ProjectModal;
