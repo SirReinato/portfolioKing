@@ -31,6 +31,8 @@ O portfólio passou por uma **repaginação de 100% da arquitetura e da experiê
 
 ---
 
+O título do Hero tem uma passagem de brilho em Full-Stack. Na vitrine, o card de Peças Mozi recebe um foco de luz que acompanha o ponteiro. Os dois efeitos respeitam a preferência por movimento reduzido.
+
 ### Projetos em destaque
 
 - **Peças Mozi** reúne triagem de documentos, cálculos, geração assistida por IA, revisão humana e exportação para Word.

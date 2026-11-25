@@ -116,6 +116,31 @@ const Highlight = styled.h1`
   }
 `;
 
+const shineSweep = keyframes`
+  from { background-position: 100% 50%; }
+  to { background-position: 0% 50%; }
+`;
+
+const ShinyTextStl = styled.span`
+  display: inline-block;
+
+  @media (prefers-reduced-motion: no-preference) {
+    @supports (background-clip: text) {
+      background-image: linear-gradient(
+        110deg,
+        ${({ theme }) => theme.colors.textHighlight} 40%,
+        ${({ theme }) => theme.colors.accent} 50%,
+        ${({ theme }) => theme.colors.textHighlight} 60%
+      );
+      background-size: 260% 100%;
+      background-position: 100% 50%;
+      background-clip: text;
+      color: transparent;
+      animation: ${shineSweep} 1.6s ease-in-out 0.65s 1;
+    }
+  }
+`;
+
 const Description = styled.p`
   font-family: ${({ theme }) => theme.fonts?.body || "'Inter', sans-serif"};
   font-size: 1.05rem;
@@ -466,7 +491,9 @@ const Hero = () => {
 
           <motion.div variants={childVariants}>
             <Greeting>Olá, me chamo Renato França</Greeting>
-            <Highlight>Desenvolvedor Full-Stack</Highlight>
+            <Highlight>
+              Desenvolvedor <ShinyTextStl>Full-Stack</ShinyTextStl>
+            </Highlight>
           </motion.div>
 
           <motion.div variants={childVariants}>

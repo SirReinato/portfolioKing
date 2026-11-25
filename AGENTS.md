@@ -67,6 +67,7 @@ Use Node.js 22, conforme `.nvmrc`. O mínimo declarado no `package.json` é Node
 
 - A navegação usa âncoras nativas e o `IntersectionObserver` do `Header` para marcar a seção ativa. Ao editar a navegação, confira os `href` e os `id` juntos. Mantenha o link Sobre apontando para `#about` nos menus desktop e mobile.
 - `Portfolio.jsx` mantém o projeto selecionado e controla a abertura do `ProjectModal`. Em mudanças nesse fluxo, preserve o fechamento por botão, clique no fundo e Escape, a animação de saída e a liberação da rolagem.
+- O Spotlight do `ProjectCard` fica reservado a Peças Mozi (ID `2`). Os cards abrem os detalhes por clique, toque e teclado. Preserve o foco visível no controle do card.
 - A aplicação não tem roteador, backend, banco, autenticação nem variáveis de ambiente próprias. Qualquer valor com prefixo `VITE_` fica exposto no cliente. Mantenha credenciais e tokens privados fora do frontend.
 
 ## Conteúdo, componentes e estilos
@@ -78,6 +79,7 @@ Use Node.js 22, conforme `.nvmrc`. O mínimo declarado no `package.json` é Node
 - Consulte o React Bits via MCP shadcn quando precisar avaliar um componente. Antes de incorporá-lo, verifique as dependências e adapte os estilos para styled-components conforme as convenções acima.
 - Declare as props dos componentes com `prop-types` de acordo com o contrato de cada componente.
 - Use Framer Motion para as interações animadas e reaproveite `AnimatedSection` para revelações ao rolar. Ao editar interações, verifique o uso por teclado, o foco visível e o comportamento com preferência por movimento reduzido.
+- O Shiny Text do Hero faz uma passagem de brilho em Full-Stack. Esse efeito e o Spotlight são adaptados do React Bits para styled-components e respeitam `prefers-reduced-motion`.
 
 ## Validação e entrega
 
@@ -96,3 +98,4 @@ Use Node.js 22, conforme `.nvmrc`. O mínimo declarado no `package.json` é Node
 | 2026-11-25 | Configuração de `npm run graphify` e geração do primeiro mapa local, com 161 nós, 294 arestas e 10 comunidades. |
 | 2026-11-25 | Atualização da apresentação, dos metadados e da vitrine para refletir o perfil full-stack, com Peças Mozi em primeiro destaque. |
 | 2026-11-25 | Configuração do MCP shadcn no Codex do projeto e do catálogo `@react-bits` para consulta. |
+| 2026-11-25 | Spotlight Card em Peças Mozi e Shiny Text em Full-Stack, com foco visível nos cards e suporte a movimento reduzido nos dois efeitos. |

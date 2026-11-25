@@ -101,6 +101,8 @@ const cardVariants = {
    Componente Portfolio (Página)
    ============================ */
 
+const spotlightProjectId = 2;
+
 const Portfolio = () => {
   const [selectedProject, setSelectedProject] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -138,6 +140,7 @@ const Portfolio = () => {
                 path={project.path}
                 nome={project.nome}
                 subtitulo={project.subtitulo}
+                spotlight={project.id === spotlightProjectId}
                 onClick={() => handleCardClick(project)}
               />
             </motion.div>
