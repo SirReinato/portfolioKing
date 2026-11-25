@@ -63,6 +63,7 @@ Use Node.js 22, conforme `.nvmrc`. O mínimo declarado no `package.json` é Node
 | `src/styles/theme.js` e `src/styles/GlobalStyles.js` | Tokens de design, breakpoints e estilos globais. |
 | `src/data/projects.json` | Catálogo local que alimenta a vitrine. |
 | `public/` | Arquivos servidos a partir da raiz do site, incluindo capas, avatar e currículo. |
+| `.codex/config.toml` e `components.json` | MCP shadcn do projeto e catálogo `@react-bits` para consulta de componentes. |
 
 - A navegação usa âncoras nativas e o `IntersectionObserver` do `Header` para marcar a seção ativa. Ao editar a navegação, confira os `href` e os `id` juntos. Mantenha o link Sobre apontando para `#about` nos menus desktop e mobile.
 - `Portfolio.jsx` mantém o projeto selecionado e controla a abertura do `ProjectModal`. Em mudanças nesse fluxo, preserve o fechamento por botão, clique no fundo e Escape, a animação de saída e a liberação da rolagem.
@@ -74,6 +75,7 @@ Use Node.js 22, conforme `.nvmrc`. O mínimo declarado no `package.json` é Node
 - Coloque as capas em `public/portfolio/` e use `path` no formato `/portfolio/arquivo.png`, com a capitalização exata do arquivo. Confira a capa e os destinos dos links no card e no modal. O currículo apontado pelo cabeçalho e pelo Hero é `public/curriculo-renato-franca.pdf`.
 - Siga a organização em PascalCase com arquivo de mesmo nome, como `ProjectCard/ProjectCard.jsx`. Mantenha o conteúdo visível ao visitante em português do Brasil e preserve a identidade visual do portfólio.
 - Use styled-components no próprio componente ou em um `styles.js` adjacente. Aplique o sufixo `Stl` a novos styled-components e aos que forem editados, como `CardTitleStl`. Reutilize os tokens de `theme.js`, centralize estilos globais em `GlobalStyles.js` e use props transitórias com `$` para valores exclusivos de estilo. Mantenha `src/` livre de novos arquivos ou imports de CSS e SCSS. `Portfolio.module.scss` é um arquivo legado sem importação no código atual.
+- Consulte o React Bits via MCP shadcn quando precisar avaliar um componente. Antes de incorporá-lo, verifique as dependências e adapte os estilos para styled-components conforme as convenções acima.
 - Declare as props dos componentes com `prop-types` de acordo com o contrato de cada componente.
 - Use Framer Motion para as interações animadas e reaproveite `AnimatedSection` para revelações ao rolar. Ao editar interações, verifique o uso por teclado, o foco visível e o comportamento com preferência por movimento reduzido.
 
@@ -93,3 +95,4 @@ Use Node.js 22, conforme `.nvmrc`. O mínimo declarado no `package.json` é Node
 | 2026-11-25 | Inclusão das seis regras obrigatórias do modelo, das convenções de estilo e das regras de validação e entrega. |
 | 2026-11-25 | Configuração de `npm run graphify` e geração do primeiro mapa local, com 161 nós, 294 arestas e 10 comunidades. |
 | 2026-11-25 | Atualização da apresentação, dos metadados e da vitrine para refletir o perfil full-stack, com Peças Mozi em primeiro destaque. |
+| 2026-11-25 | Configuração do MCP shadcn no Codex do projeto e do catálogo `@react-bits` para consulta. |

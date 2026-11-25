@@ -112,6 +112,12 @@ src/
 
 Instale a CLI oficial com `uv tool install graphifyy==0.9.96` e confirme que `graphify --version` está disponível no terminal. Na raiz do projeto, execute `npm run graphify` para gerar o mapa local de código. Abra `graphify-out/graph.html` no navegador.
 
+## MCP shadcn e React Bits
+
+Em um projeto confiável no Codex, abra uma nova sessão após atualizar o repositório para carregar o MCP shadcn de `.codex/config.toml`. O catálogo `@react-bits` está em `components.json`. Para testar, peça ao Codex para procurar `AnimatedContent` no React Bits.
+
+Essa configuração permite consultar o catálogo. Ao incorporar um item, revise suas dependências e adapte os estilos para styled-components.
+
 ## 📬 Contato
 
 - **Desenvolvedor:** Renato França
