@@ -74,6 +74,7 @@ Use Node.js 22, conforme `.nvmrc`. O mínimo declarado no `package.json` é Node
 
 - Para incluir ou atualizar um projeto, edite `src/data/projects.json`. Mantenha um `id` numérico único e estável e siga os campos `nome`, `subtitulo`, `descricao`, `path`, `url` e `repo`. A ordem do JSON é a ordem da vitrine.
 - Coloque as capas em `public/portfolio/` e use `path` no formato `/portfolio/arquivo.png`, com a capitalização exata do arquivo. Confira a capa e os destinos dos links no card e no modal. O currículo apontado pelo cabeçalho e pelo Hero é `public/curriculo-renato-franca.pdf`. Mantenha a cópia pública `public/cv-renato-franca.pdf` idêntica e alinhe os destaques do PDF à ordem de `src/data/projects.json`.
+- Os links de currículo do cabeçalho desktop, do menu mobile e do Hero usam `download` com o mesmo nome de arquivo.
 - Siga a organização em PascalCase com arquivo de mesmo nome, como `ProjectCard/ProjectCard.jsx`. Mantenha o conteúdo visível ao visitante em português do Brasil e preserve a identidade visual do portfólio.
 - Use styled-components no próprio componente ou em um `styles.js` adjacente. Aplique o sufixo `Stl` a novos styled-components e aos que forem editados, como `CardTitleStl`. Reutilize os tokens de `theme.js`, centralize estilos globais em `GlobalStyles.js` e use props transitórias com `$` para valores exclusivos de estilo. Mantenha `src/` livre de novos arquivos ou imports de CSS e SCSS. `Portfolio.module.scss` é um arquivo legado sem importação no código atual.
 - Consulte o React Bits via MCP shadcn quando precisar avaliar um componente. Antes de incorporá-lo, verifique as dependências e adapte os estilos para styled-components conforme as convenções acima.
@@ -103,3 +104,4 @@ Use Node.js 22, conforme `.nvmrc`. O mínimo declarado no `package.json` é Node
 | 2026-11-25 | Spotlight Card em Peças Mozi e Shiny Text em Full-Stack, com foco visível nos cards e suporte a movimento reduzido nos dois efeitos. |
 | 2026-11-25 | Logo Loop nas habilidades com controle de pausa e Star Border no link de contato `contato@francalabs.dev`. |
 | 2026-11-25 | Atualização do currículo baixável para o perfil full-stack, com Peças Mozi, N1 GuidePro e Guia Econômico na ordem da vitrine. |
+| 2026-11-26 | Download direto do currículo no cabeçalho desktop e mobile, alinhado ao Hero. |

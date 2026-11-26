@@ -39,7 +39,7 @@ O título do Hero tem uma passagem de brilho em Full-Stack. Na vitrine, o card d
 - **N1 GuidePro** conecta documentação de suporte a busca, APIs e Supabase.
 - **Guia Econômico** integra um painel financeiro a autenticação, persistência e entrada de despesas por webhook.
 
-O currículo baixável pelo cabeçalho e pelo Hero apresenta o perfil full-stack e os mesmos três projetos em destaque, na ordem da vitrine.
+O cabeçalho (desktop e mobile) e o Hero baixam diretamente o currículo em PDF, com o perfil full-stack e os mesmos três projetos em destaque, na ordem da vitrine.
 
 ## 🛠️ Tecnologias Utilizadas
 

@@ -44,6 +44,7 @@ const NAV_LINKS = [
   {
     label: 'Download CV',
     href: '/curriculo-renato-franca.pdf',
+    download: 'curriculo-renato-franca.pdf',
     external: true,
   },
 ];
@@ -113,7 +114,8 @@ const Header = () => {
             <NavLink
               key={link.label}
               href={link.href}
-              target={link.external ? '_blank' : undefined}
+              download={link.download}
+              target={link.external && !link.download ? '_blank' : undefined}
               rel={link.external ? 'noopener noreferrer' : undefined}
               $active={!link.external && activeSection === link.href.replace('#', '')}
             >
@@ -165,7 +167,8 @@ const Header = () => {
                   as={motion.a}
                   key={link.label}
                   href={link.href}
-                  target={link.external ? '_blank' : undefined}
+                  download={link.download}
+                  target={link.external && !link.download ? '_blank' : undefined}
                   rel={link.external ? 'noopener noreferrer' : undefined}
                   $active={!link.external && activeSection === link.href.replace('#', '')}
                   onClick={handleLinkClick}
